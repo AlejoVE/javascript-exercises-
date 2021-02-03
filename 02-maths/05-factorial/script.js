@@ -9,14 +9,22 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-    
-    // to get the value of an input: document.getElementById("element-id").value
+(function () {
+	// to get the value of an input: document.getElementById("element-id").value
 
-    document.getElementById("run").addEventListener("click", function() {
+	document.getElementById('run').addEventListener('click', function () {
+		const number = Number(document.querySelector('input').value);
 
-        // your code here
-
-    });
-
+		if (number < 0) {
+			console.log('Error, negative numbers do not have factorials');
+		} else if (number === 0) {
+			console.log(`The factorial of ${number} is 1.`);
+		} else {
+			let fact = 1;
+			for (i = 1; i <= number; i++) {
+				fact *= i;
+			}
+			alert(`${fact}`);
+		}
+	});
 })();

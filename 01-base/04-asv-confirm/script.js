@@ -10,7 +10,7 @@
 // You will have time to focus on it later.
 
 (function () {
-	const myFunction = function () {
+	const myFunction = () => {
 		const age = prompt('What is your age?');
 		const gender = prompt('What is your gender?');
 		const city = prompt('Where do you live?');

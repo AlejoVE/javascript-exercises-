@@ -9,22 +9,46 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-    // to get the value of an input: document.getElementById("element-id").value
+(function () {
+	// to get the value of an input: document.getElementById("element-id").value
 
-    document.getElementById("addition").addEventListener("click", function() {
-        // perform an addition
-    });
+	document.getElementById('addition').addEventListener('click', function () {
+		const numberOne = Number(document.getElementById('op-one').value);
+		const numberTwo = Number(document.getElementById('op-two').value);
 
-    document.getElementById("substraction").addEventListener("click", function() {
-        // perform an substraction
-    });
+		const result = numberOne + numberTwo;
 
-    document.getElementById("multiplication").addEventListener("click", function() {
-        // perform an multiplication
-    });
+		console.log(result);
+	});
 
-    document.getElementById("division").addEventListener("click", function() {
-        // perform an division
-    });
+	document
+		.getElementById('substraction')
+		.addEventListener('click', function () {
+			const numberOne = Number(document.getElementById('op-one').value);
+			const numberTwo = Number(document.getElementById('op-two').value);
+
+			const result = numberOne - numberTwo;
+
+			console.log(result);
+		});
+
+	document
+		.getElementById('multiplication')
+		.addEventListener('click', function () {
+			const numberOne = Number(document.getElementById('op-one').value);
+			const numberTwo = Number(document.getElementById('op-two').value);
+
+			const result = numberOne * numberTwo;
+
+			console.log(result);
+		});
+
+	document.getElementById('division').addEventListener('click', function () {
+		const numberOne = Number(document.getElementById('op-one').value);
+		const numberTwo = Number(document.getElementById('op-two').value);
+
+		const result = numberOne / numberTwo;
+
+		console.log(result);
+	});
 })();

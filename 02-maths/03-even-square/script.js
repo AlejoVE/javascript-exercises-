@@ -9,12 +9,21 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+	document.getElementById('run').addEventListener('click', function () {
+		const squareNumbers = [];
 
-    document.getElementById("run").addEventListener("click", function() {
+		const square = () => {
+			for (let n = 1; n <= 21; n++) {
+				const result = n * n;
 
-        // your code here
+				if (result <= 21) {
+					squareNumbers.push(result);
+				}
+			}
+		};
 
-    });
-
+		square();
+		alert(`The numbers are ${[...squareNumbers]}`);
+	});
 })();
