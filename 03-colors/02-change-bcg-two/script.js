@@ -9,8 +9,11 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+	const button = document.querySelector('button');
 
-    // your code here
-
+	button.addEventListener('click', () => {
+		const color = document.querySelector('input').value;
+		document.body.style.background = color;
+	});
 })();
