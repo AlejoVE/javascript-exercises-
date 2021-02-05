@@ -9,10 +9,16 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+	const tagEl = document.getElementById('target');
 
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
+	const today = new Date();
+	const hour = today.getHours();
+	const minutes = today.getMinutes();
+	const day = today.getDay();
+	const dayOfTheWeek = today.toLocaleString('en-us', { weekday: 'long' });
+	const month = today.toLocaleString('en-us', { month: 'long' });
+	const year = today.getFullYear();
 
-    // your code here
-
+	tagEl.innerHTML = `${dayOfTheWeek} ${day} ${month} ${year}, ${hour}h${minutes}`;
 })();

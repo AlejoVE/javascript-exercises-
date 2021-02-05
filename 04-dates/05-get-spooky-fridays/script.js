@@ -9,8 +9,24 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+	const button = document.querySelector('button');
+	const months = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
-    // your code here
+	button.addEventListener('click', () => {
+		const year = Number(document.getElementById('year').value);
 
+		months.forEach((month) => {
+			for (let day = 1; day <= 31; day++) {
+				const date = new Date(year, month, day);
+				const dayOfTheWeek = date.getDay();
+				const dayOfTheMonth = date.getDate();
+				const monthName = date.toLocaleString('en-us', { month: 'long' });
+
+				if (dayOfTheWeek === 5 && dayOfTheMonth === 13) {
+					alert(monthName);
+				}
+			}
+		});
+	});
 })();

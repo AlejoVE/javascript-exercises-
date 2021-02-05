@@ -24,6 +24,7 @@
 		};
 
 		square();
+
 		alert(`The numbers are ${[...squareNumbers]}`);
 	});
 })();

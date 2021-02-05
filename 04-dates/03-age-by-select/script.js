@@ -9,8 +9,25 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+	const buttonEl = document.querySelector('button');
 
-    // your code here
+	buttonEl.addEventListener('click', () => {
+		const day = Number(document.getElementById('dob-day').value);
+		const month = Number(document.getElementById('dob-month').value) - 1;
+		const year = Number(document.getElementById('dob-year').value);
 
+		const birthday = new Date(year, month, day);
+
+		const today = Date.now();
+
+		const operation = today - birthday.getTime();
+
+		const newDate = new Date(operation);
+		const fullYear = newDate.getFullYear();
+
+		const age = fullYear - 1970;
+
+		alert(`You are ${age} years old`);
+	});
 })();
