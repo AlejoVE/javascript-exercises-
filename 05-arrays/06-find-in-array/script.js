@@ -9,86 +9,96 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+	const people = [
+		{
+			firstname: 'Bradford',
+			lastname: 'Coldbath',
+			email: 'bcoldbath0@wired.com',
+		},
+		{
+			firstname: 'Nadiya',
+			lastname: 'Stendell',
+			email: 'nstendell1@nsw.gov.au',
+		},
+		{
+			firstname: 'Auroora',
+			lastname: 'Stapford',
+			email: 'astapford2@wsj.com',
+		},
+		{
+			firstname: 'Berkley',
+			lastname: 'McKall',
+			email: 'bmckall3@about.me',
+		},
+		{
+			firstname: 'Wolf',
+			lastname: 'McCurley',
+			email: 'wmccurley4@yale.edu',
+		},
+		{
+			firstname: 'Jorrie',
+			lastname: 'Canedo',
+			email: 'jcanedo5@engadget.com',
+		},
+		{
+			firstname: 'Bethanne',
+			lastname: 'Ackred',
+			email: 'backred6@imgur.com',
+		},
+		{
+			firstname: 'Zorah',
+			lastname: 'Whild',
+			email: 'zwhild7@sogou.com',
+		},
+		{
+			firstname: 'Jean',
+			lastname: 'Dupont',
+			email: 'jdupont@elpais.com',
+		},
+		{
+			firstname: 'Zulema',
+			lastname: 'Ericsson',
+			email: 'zericsson9@ed.gov',
+		},
+		{
+			firstname: 'Brady',
+			lastname: 'Scrannage',
+			email: 'bscrannagea@google.fr',
+		},
+		{
+			firstname: 'Isidore',
+			lastname: 'Korf',
+			email: 'ikorfb@google.com',
+		},
+		{
+			firstname: 'Bartholomew',
+			lastname: 'Stockbridge',
+			email: 'bstockbridgec@is.gd',
+		},
+		{
+			firstname: 'Laney',
+			lastname: "O' Mara",
+			email: 'lomarad@forbes.com',
+		},
+		{
+			firstname: 'Gabe',
+			lastname: 'Keatch',
+			email: 'gkeatche@google.fr',
+		},
+	];
 
-    const people = [
-        {
-            firstname: "Bradford",
-            lastname: "Coldbath",
-            email: "bcoldbath0@wired.com",
-        },
-        {
-            firstname: "Nadiya",
-            lastname: "Stendell",
-            email: "nstendell1@nsw.gov.au",
-        },
-        {
-            firstname: "Auroora",
-            lastname: "Stapford",
-            email: "astapford2@wsj.com",
-        },
-        {
-            firstname: "Berkley",
-            lastname: "McKall",
-            email: "bmckall3@about.me",
-        },
-        {
-            firstname: "Wolf",
-            lastname: "McCurley",
-            email: "wmccurley4@yale.edu",
-        },
-        {
-            firstname: "Jorrie",
-            lastname: "Canedo",
-            email: "jcanedo5@engadget.com",
-        },
-        {
-            firstname: "Bethanne",
-            lastname: "Ackred",
-            email: "backred6@imgur.com",
-        },
-        {
-            firstname: "Zorah",
-            lastname: "Whild",
-            email: "zwhild7@sogou.com",
-        },
-        {
-            firstname: "Jean",
-            lastname: "Dupont",
-            email: "jdupont@elpais.com",
-        },
-        {
-            firstname: "Zulema",
-            lastname: "Ericsson",
-            email: "zericsson9@ed.gov",
-        },
-        {
-            firstname: "Brady",
-            lastname: "Scrannage",
-            email: "bscrannagea@google.fr",
-        },
-        {
-            firstname: "Isidore",
-            lastname: "Korf",
-            email: "ikorfb@google.com",
-        },
-        {
-            firstname: "Bartholomew",
-            lastname: "Stockbridge",
-            email: "bstockbridgec@is.gd",
-        },
-        {
-            firstname: "Laney",
-            lastname: "O' Mara",
-            email: "lomarad@forbes.com",
-        },
-        {
-            firstname: "Gabe",
-            lastname: "Keatch",
-            email: "gkeatche@google.fr",
-        },
-    ];
+	const button = document.querySelector('button');
 
-    // your code here
+	button.addEventListener('click', () => {
+		const person = people.filter(
+			(person) => person.lastname === 'Dupont' && person.firstname === 'Jean'
+		);
 
+		console.log(person[0].email);
+
+		const index = people.findIndex((ele) => ele.email === person[0].email);
+
+		console.log(index);
+	});
 })();

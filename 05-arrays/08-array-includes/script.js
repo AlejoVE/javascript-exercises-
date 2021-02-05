@@ -9,23 +9,31 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+	const fruits = [
+		'apple',
+		'perry',
+		'strawberry',
+		'tomato',
+		'kiwi',
+		'banana',
+		'orange',
+		'mandarin',
+		'durian',
+		'peach',
+		'grapes',
+		'cherry',
+	];
 
-    const fruits = [
-        "apple",
-        "perry",
-        "strawberry",
-        "tomato",
-        "kiwi",
-        "banana",
-        "orange",
-        "mandarin",
-        "durian",
-        "peach",
-        "grapes",
-        "cherry",
-    ];
+	const button = document.getElementById('run');
 
-    // your code here
+	const isValid = fruits.includes('apple');
 
+	button.addEventListener('click', () => {
+		if (isValid) {
+			console.log('yes');
+		} else {
+			console.log('no');
+		}
+	});
 })();
