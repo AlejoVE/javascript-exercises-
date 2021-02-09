@@ -10,13 +10,21 @@
 // You will have time to focus on it later.
 
 (() => {
-    const person = {
-        lastname: "Delnatte",
-        firstname: "Pierre-Antoine",
-        nickname: "Leny",
-        birthDate: "08-05-1985",
-        city: "Liège",
-        status: "married",
-    };
-    // your code here
+	const person = {
+		lastname: 'Delnatte',
+		firstname: 'Pierre-Antoine',
+		nickname: 'Leny',
+		birthDate: '08-05-1985',
+		city: 'Liège',
+		status: 'married',
+	};
+
+	const button = document.querySelector('button');
+
+	button.addEventListener('click', () => {
+		for (const key in person) {
+			console.log(key);
+			console.log(person[key]);
+		}
+	});
 })();

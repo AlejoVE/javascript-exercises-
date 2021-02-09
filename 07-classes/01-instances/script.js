@@ -10,11 +10,17 @@
 // You will have time to focus on it later.
 
 (() => {
-    class Cat {
-        constructor(name, age) {
-            this.name = name;
-            this.age = age;
-        }
-    }
-    // your code here
+	class Cat {
+		constructor(name, age) {
+			this.name = name;
+			this.age = age;
+		}
+	}
+	const skitty = new Cat('Skitty', 9);
+	const pixel = new Cat('Pixel', 6);
+
+	document.querySelector('button').addEventListener('click', () => {
+		console.log(skitty);
+		console.log(pixel);
+	});
 })();

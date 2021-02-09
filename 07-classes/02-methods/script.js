@@ -10,5 +10,19 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+	class Person {
+		constructor(firstName, lastName) {
+			(this.firstName = firstName), (this.lastName = lastName);
+		}
+
+		sayHello() {
+			return `Hello, ${this.firstName} ${this.lastName}`;
+		}
+	}
+
+	const newPeron = new Person('Alejandro', 'Montilla');
+
+	document.querySelector('button').addEventListener('click', () => {
+		console.log(newPeron.sayHello());
+	});
 })();
