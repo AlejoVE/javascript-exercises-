@@ -9,16 +9,24 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+	var gallery = [
+		'../../_shared/img/bell.svg',
+		'../../_shared/img/clock.svg',
+		'../../_shared/img/compass.svg',
+		'../../_shared/img/lemon.svg',
+		'../../_shared/img/map.svg',
+	];
 
-    var gallery= [
-        "../../_shared/img/bell.svg",
-        "../../_shared/img/clock.svg",
-        "../../_shared/img/compass.svg",
-        "../../_shared/img/lemon.svg",
-        "../../_shared/img/map.svg",
-    ];
+	const button = document.querySelector('button');
+	const imgEl = document.querySelector('img');
+	let arrayIndex = 0;
 
-    // your code here
-
+	button.addEventListener('click', () => {
+		arrayIndex++;
+		if (arrayIndex >= gallery.length) {
+			arrayIndex = 0;
+		}
+		imgEl.src = gallery[arrayIndex];
+	});
 })();

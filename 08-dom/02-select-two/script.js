@@ -9,8 +9,7 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    // your code here
-
+(function () {
+	const pEle = document.querySelectorAll('p');
+	pEle[1].innerText = 'owned';
 })();

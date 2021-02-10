@@ -9,8 +9,29 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+	const input = document.querySelector('input');
+	const valEl = document.getElementById('validity');
 
-    // your code here
+	input.addEventListener('keyup', () => {
+		const value = input.value;
+		const array = value.split('');
+		const numbers = [];
 
+		if (value.length >= 8) {
+			array.forEach((e) => {
+				const regEx = /\d/;
+				const isNumber = regEx.test(e);
+				if (isNumber) {
+					numbers.push(e);
+				}
+			});
+
+			if (numbers.length >= 2) {
+				valEl.innerText = 'Ok';
+			} else {
+				valEl.innerText = 'Not ok';
+			}
+		}
+	});
 })();

@@ -9,8 +9,13 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+	const sourceEl = document.getElementById('source');
+	const linkImg = sourceEl.getAttribute('data-image');
+	const targetEl = document.getElementById('target');
+	const imgEl = document.createElement('img');
+	imgEl.src = linkImg;
 
-    // your code here
-
+	targetEl.appendChild(imgEl);
+	sourceEl.remove();
 })();

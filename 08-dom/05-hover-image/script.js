@@ -9,8 +9,11 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+	const imgEl = document.querySelector('img');
+	const imgHover = imgEl.getAttribute('data-hover');
 
-    // your code here
-
+	imgEl.addEventListener('mouseover', () => {
+		imgEl.src = imgHover;
+	});
 })();

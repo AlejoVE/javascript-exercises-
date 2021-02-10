@@ -9,8 +9,15 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+	const input = document.querySelector('input');
+	const counter = document.querySelector('span');
 
-    // your code here
-
+	input.addEventListener('keyup', () => {
+		const value = input.value;
+		counter.innerText = value.length;
+		if (value.length >= 10) {
+			input.setAttribute('maxlength', '10');
+		}
+	});
 })();

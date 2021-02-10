@@ -9,8 +9,20 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+	const pass1 = document.getElementById('pass-one');
+	const pass2 = document.getElementById('pass-two');
+	const inputs = document.querySelectorAll('input');
+	console.log(inputs);
 
-    // your code here
+	document.querySelector('button').addEventListener('click', () => {
+		const valueA = pass1.value;
+		const valueB = pass2.value;
 
+		if (valueA != valueB) {
+			inputs.forEach((input) => {
+				input.style.border = '1px solid red';
+			});
+		}
+	});
 })();
