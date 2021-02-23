@@ -15,23 +15,18 @@
 	const yellowButton = document.getElementById('yellow');
 	const blueButton = document.getElementById('blue');
 
-	const changeColor = (button, color) => {
-		button.style.background = color;
+	const changeColor = (color) => {
+		document.body.style.background = color;
 	};
 
-	redButton.addEventListener('click', () => {
-		changeColor(redButton, 'red');
-	});
+	const addEventListener = (button, color) => {
+		button.addEventListener('click', () => {
+			changeColor(color);
+		});
+	};
 
-	greenButton.addEventListener('click', () => {
-		changeColor(greenButton, 'green');
-	});
-
-	yellowButton.addEventListener('click', () => {
-		changeColor(yellowButton, 'yellow');
-	});
-
-	blueButton.addEventListener('click', () => {
-		changeColor(blueButton, 'blue');
-	});
+	addEventListener(redButton, 'red');
+	addEventListener(greenButton, 'green');
+	addEventListener(yellowButton, 'yellow');
+	addEventListener(blueButton, 'blue');
 })();

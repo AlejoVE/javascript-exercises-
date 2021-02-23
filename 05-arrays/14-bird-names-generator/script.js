@@ -38,12 +38,11 @@
 		'arboré',
 	]);
 
-	const birdsArr = Array.from(birds);
 	const adjectivesArr = Array.from(adjectives);
 	const tagEl = document.getElementById('target');
 
 	document.querySelector('button').addEventListener('click', () => {
-		const randomBird = birdsArr[Math.floor(Math.random() * birdsArr.length)];
+		const randomBird = birds[Math.floor(Math.random() * birds.length)];
 		const randomAdj =
 			adjectivesArr[Math.floor(Math.random() * adjectivesArr.length)];
 

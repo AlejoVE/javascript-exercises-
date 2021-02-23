@@ -9,8 +9,12 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+	const input = document.querySelector('input');
 
-    // your code here
+	const targetEl = document.getElementById('target');
 
+	input.addEventListener('input', () => {
+		targetEl.innerText = `0${input.value}`;
+	});
 })();

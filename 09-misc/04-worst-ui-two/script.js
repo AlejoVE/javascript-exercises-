@@ -9,8 +9,26 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+	const button1 = document.getElementById('part-one');
+	const button2 = document.getElementById('part-two');
+	const button3 = document.getElementById('part-three');
+	const button4 = document.getElementById('part-four');
+	const tagEl = document.getElementById('target');
+	let valueTarget = tagEl.innerHTML;
+	let filterString = valueTarget.split('+');
+	let targetNumber = parseInt(filterString[1]);
 
-    // your code here
+	const addListener = (button) => {
+		button.addEventListener('click', () => {
+			const buttonValue = parseInt(button.innerHTML);
+			targetNumber += buttonValue;
+			tagEl.innerHTML = `+${targetNumber}`;
+		});
+	};
 
+	addListener(button1);
+	addListener(button2);
+	addListener(button3);
+	addListener(button4);
 })();

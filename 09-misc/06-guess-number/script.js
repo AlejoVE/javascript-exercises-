@@ -9,8 +9,41 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+	const randomNumber = Math.floor(Math.random(1, 100) * 100);
+	console.log(randomNumber);
+	let guesses = 0;
 
-    // your code here
+	const getAnswer = () => {
+		let userAnswer = Number(prompt('Guess a number between 1 and 100'));
+		let notNUmber = Object.is(NaN, userAnswer);
 
+		if (notNUmber) {
+			alert('only numbers are allowed');
+			getAnswer();
+		}
+
+		switch (true) {
+			case userAnswer === 0:
+				break;
+			case userAnswer === randomNumber:
+				guesses++;
+				alert(`That is! You needed ${guesses} guesses`);
+				break;
+			case userAnswer < randomNumber:
+				guesses++;
+				alert('Higher, try again');
+				getAnswer();
+				break;
+			case userAnswer > randomNumber:
+				guesses++;
+				alert('Lower, try again');
+				getAnswer();
+				break;
+			default:
+				break;
+		}
+	};
+
+	getAnswer();
 })();

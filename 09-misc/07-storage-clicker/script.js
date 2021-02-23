@@ -9,8 +9,14 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+	const targetEl = document.getElementById('target');
+	let counter = localStorage.getItem('counter') || 0;
+	targetEl.innerHTML = counter;
 
-    // your code here
-
+	document.querySelector('button').addEventListener('click', () => {
+		counter++;
+		localStorage.setItem('counter', JSON.stringify(counter));
+		targetEl.innerHTML = counter;
+	});
 })();
