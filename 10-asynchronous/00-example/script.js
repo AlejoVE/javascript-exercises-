@@ -21,6 +21,7 @@
 			console.clear();
 		}
 
+		console.log(intervals);
 		intervals.push(setupIntervalMessage('one', 1000));
 		intervals.push(setupIntervalMessage('two', 1333));
 		intervals.push(setupIntervalMessage('three', 2500));

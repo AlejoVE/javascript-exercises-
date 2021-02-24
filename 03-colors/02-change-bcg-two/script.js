@@ -12,8 +12,10 @@
 (function () {
 	const button = document.querySelector('button');
 
-	button.addEventListener('click', () => {
+	const myFunction = () => {
 		const color = document.querySelector('input').value;
 		document.body.style.background = color;
-	});
+	};
+
+	button.addEventListener('click', myFunction);
 })();

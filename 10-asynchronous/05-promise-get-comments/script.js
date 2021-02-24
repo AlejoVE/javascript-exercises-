@@ -14,7 +14,7 @@
 		window.lib
 			.getPosts()
 			.then((data) => {
-				data.map((article) => {
+				data.forEach((article) => {
 					window.lib.getComments().then((comments) => {
 						article.comments = comments;
 						console.log(article);

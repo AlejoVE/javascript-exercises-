@@ -10,5 +10,20 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+	const input = document.querySelector('input');
+	document.querySelector('button').addEventListener('click', async () => {
+		const id = Number(input.value);
+
+		try {
+			const res = await fetch(`http://localhost:3000/heroes/`);
+			const heroes = await res.json();
+
+			const index = heroes.findIndex((hero) => hero.id === id);
+			const [removedHero] = heroes.splice(index, 1);
+			console.log('Deleted hero:', removedHero);
+			console.log(heroes);
+		} catch (error) {
+			console.log(error);
+		}
+	});
 })();
