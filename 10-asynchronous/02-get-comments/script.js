@@ -11,20 +11,20 @@
 
 (() => {
 	document.querySelector('button').addEventListener('click', () => {
+		//prettier-ignore
 		window.lib.getPosts((error, data) => {
-			if (error) {
-				console.log(error);
-			} else {
-				data.map((article) => {
-					window.lib.getComments(article.id, (error = null, comments) => {
-						if (error) {
-							console.log(error);
-						}
-						article.comments = comments;
-						console.log(article);
-					});
+
+			// console.log(data)
+			data.forEach((article) => {
+
+				window.lib.getComments(article.id, (error, comments) => {
+					article.comments = comments;
+					console.log(article)
+
 				});
-			}
+
+			});
+
 		});
 	});
 })();

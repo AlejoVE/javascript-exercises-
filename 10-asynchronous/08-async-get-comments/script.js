@@ -11,8 +11,6 @@
 
 (() => {
 	document.querySelector('button').addEventListener('click', async () => {
-		const posts = await window.lib.getPosts();
-
 		posts.forEach(async (post) => {
 			const comments = await window.lib.getComments(post.id);
 			post.comments = comments;

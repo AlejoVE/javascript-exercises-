@@ -19,4 +19,10 @@
 			}
 		});
 	});
+
+	document
+		.querySelector('button')
+		.addEventListener('click', (error, data) => {});
+
+	const myFun;
 })();

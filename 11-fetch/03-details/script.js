@@ -33,6 +33,7 @@
 			emEl.innerHTML = `${hero.alterEgo}`;
 			target.appendChild(templateClone);
 		} catch (error) {
+			console.log(error);
 			alert('There is no hero with that ID');
 		}
 	});
